@@ -18,21 +18,48 @@ class LocationInfomation: BaseViewController {
     let mapView = MTMapView()
     let currentLocationButton = UIButton()
     let detailList = UITableView()
+    let detailListBackgroundView = DetailListBackgroundView()
     let viewModel = LocationInfomationViewModel()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
+        locationManager.delegate = self
     }
     
     
     func bind(_ viewModel: LocationInfomationViewModel) {
+        detailListBackgroundView.bind(viewModel.detailListBackgroundViewModel)
+        
         viewModel.setMapCenter
             .emit(to: mapView.rx.setMapCenterPoint)
             .disposed(by: disposeBag)
         
         viewModel.errorMassage
             .emit(to: self.rx.presentAlert)
+            .disposed(by: disposeBag)
+        
+        viewModel.detailListCellData
+            .drive(detailList.rx.items){ tv, row, data in
+                let cell = tv.dequeueReusableCell(withIdentifier: "DetailListCell", for: IndexPath(row: row, section: 0)) as! DetailListCell
+                cell.setData(data)
+                return cell
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.detailListCellData
+            .map { $0.compactMap{ $0.point } }
+            .drive(self.rx.addPOIItems)
+            .disposed(by: disposeBag)
+        
+        viewModel.scrollToSelectedLocation
+            .emit(to: self.rx.showSelectedLocation)
+            .disposed(by: disposeBag)
+        
+        detailList.rx.itemSelected
+            .map{ $0.row }
+            .bind(to: viewModel.detailListItemSelected)
             .disposed(by: disposeBag)
         
         currentLocationButton.rx.tap
@@ -48,6 +75,10 @@ class LocationInfomation: BaseViewController {
         currentLocationButton.setImage(UIImage(systemName: "location.fill"), for: .normal)
         currentLocationButton.backgroundColor = .white
         currentLocationButton.layer.cornerRadius = 20
+        
+        detailList.register(DetailListCell.self, forCellReuseIdentifier: "DetailListCell")
+        detailList.separatorStyle = .none
+        detailList.backgroundView = detailListBackgroundView
     }
     override func layout() {
         [mapView, currentLocationButton, detailList].forEach{view.addSubview($0)}

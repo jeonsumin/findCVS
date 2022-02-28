@@ -35,4 +35,31 @@ extension Reactive where Base: LocationInfomation {
                          completion: nil)
         }
     }
+    
+    var showSelectedLocation: Binder<Int>{
+        return Binder(base) { base, row in
+            let indexPath = IndexPath(row: row, section: 0)
+            base.detailList.selectRow(at: indexPath,
+                                      animated: true,
+                                      scrollPosition: .top)
+        }
+    }
+    var addPOIItems: Binder<[MTMapPoint]> {
+        return Binder(base) { base, points in
+            let items = points
+                .enumerated()
+                .map {offset, point -> MTMapPOIItem in
+                    let mapPOIItem = MTMapPOIItem()
+                    
+                    mapPOIItem.mapPoint = point
+                    mapPOIItem.markerType = .redPin
+                    mapPOIItem.showAnimationType = .springFromGround
+                    mapPOIItem.tag = offset
+                    
+                    return mapPOIItem
+                }
+            base.mapView.removeAllPOIItems()
+            base.mapView.addPOIItems(items)
+        }
+    }
 }

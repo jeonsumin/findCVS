@@ -20,6 +20,9 @@
 		DE1527BD27CC7614002E45E1 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DE1527BC27CC7614002E45E1 /* RxSwift */; };
 		DE1527C027CC761F002E45E1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DE1527BF27CC761F002E45E1 /* SnapKit */; };
 		DE1527C327CC7669002E45E1 /* Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C227CC7669002E45E1 /* Rx.swift */; };
+		DE1527C627CC7840002E45E1 /* DetailListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C527CC7840002E45E1 /* DetailListCell.swift */; };
+		DE1527C827CC8335002E45E1 /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C727CC8335002E45E1 /* DetailListBackgroundView.swift */; };
+		DE1527CA27CC8345002E45E1 /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C927CC8345002E45E1 /* DetailListBackgroundViewModel.swift */; };
 		DE2ED37227CC71A400782836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ED37127CC71A400782836 /* AppDelegate.swift */; };
 		DE2ED37427CC71A400782836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ED37327CC71A400782836 /* SceneDelegate.swift */; };
 		DE2ED37B27CC71A500782836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2ED37A27CC71A500782836 /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		DE1527B327CC7505002E45E1 /* LocationInfomationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationViewModel.swift; sourceTree = "<group>"; };
 		DE1527B527CC7510002E45E1 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DE1527C227CC7669002E45E1 /* Rx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rx.swift; sourceTree = "<group>"; };
+		DE1527C527CC7840002E45E1 /* DetailListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListCell.swift; sourceTree = "<group>"; };
+		DE1527C727CC8335002E45E1 /* DetailListBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundView.swift; sourceTree = "<group>"; };
+		DE1527C927CC8345002E45E1 /* DetailListBackgroundViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailListBackgroundViewModel.swift; sourceTree = "<group>"; };
 		DE2ED36E27CC71A400782836 /* findCVS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = findCVS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2ED37127CC71A400782836 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE2ED37327CC71A400782836 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +154,16 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		DE1527C427CC7838002E45E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DE1527C527CC7840002E45E1 /* DetailListCell.swift */,
+				DE1527C727CC8335002E45E1 /* DetailListBackgroundView.swift */,
+				DE1527C927CC8345002E45E1 /* DetailListBackgroundViewModel.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		DE2ED36527CC71A400782836 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +188,7 @@
 				DE1527C127CC7660002E45E1 /* Extension */,
 				DE1527A627CC7441002E45E1 /* Entities */,
 				DE1527B127CC74EF002E45E1 /* Controller */,
+				DE1527C427CC7838002E45E1 /* View */,
 				DE2ED37127CC71A400782836 /* AppDelegate.swift */,
 				DE2ED37327CC71A400782836 /* SceneDelegate.swift */,
 				DE2ED37A27CC71A500782836 /* Assets.xcassets */,
@@ -339,11 +356,14 @@
 				DE2ED37227CC71A400782836 /* AppDelegate.swift in Sources */,
 				DE2ED37427CC71A400782836 /* SceneDelegate.swift in Sources */,
 				DE1527C327CC7669002E45E1 /* Rx.swift in Sources */,
+				DE1527CA27CC8345002E45E1 /* DetailListBackgroundViewModel.swift in Sources */,
 				DE1527AC27CC7441002E45E1 /* DetailListCellData.swift in Sources */,
 				DE1527B627CC7510002E45E1 /* BaseViewController.swift in Sources */,
 				DE1527AE27CC7441002E45E1 /* LocationData.swift in Sources */,
+				DE1527C827CC8335002E45E1 /* DetailListBackgroundView.swift in Sources */,
 				DE1527B427CC7505002E45E1 /* LocationInfomationViewModel.swift in Sources */,
 				DE1527AB27CC7441002E45E1 /* MTMapViewError.swift in Sources */,
+				DE1527C627CC7840002E45E1 /* DetailListCell.swift in Sources */,
 				DE1527AD27CC7441002E45E1 /* KLDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
