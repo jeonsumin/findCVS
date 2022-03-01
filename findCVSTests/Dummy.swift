@@ -17,7 +17,9 @@ class Dummy {
         let bundle = Bundle(for: type(of: self))
         
         guard let file = bundle.url(forResource: filename, withExtension: nil) else {
-            fatalError("\(filename)을 main bundle에서 불러올 수 없습니다. ") }
+            fatalError("\(filename)을 main bundle에서 불러올 수 없습니다. ")
+        }
+        
         do {
             data = try Data(contentsOf: file)
         } catch {
@@ -27,7 +29,7 @@ class Dummy {
         do {
             let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
-        }catch {
+        } catch {
             fatalError("\(filename)을 \(T.self)로 파싱할 수 없습니다. ")
         }
     }

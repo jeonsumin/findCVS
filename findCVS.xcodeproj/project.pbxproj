@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,9 @@
 		DE1527C827CC8335002E45E1 /* DetailListBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C727CC8335002E45E1 /* DetailListBackgroundView.swift */; };
 		DE1527CA27CC8345002E45E1 /* DetailListBackgroundViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1527C927CC8345002E45E1 /* DetailListBackgroundViewModel.swift */; };
 		DE1921CF27CE0CD80007673A /* LocaNetworkStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1921CE27CE0CD80007673A /* LocaNetworkStub.swift */; };
+		DE1C953427CE14BD00F22F8E /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B627CC723D00782836 /* libc++.tbd */; };
+		DE1C953527CE14C500F22F8E /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B727CC724500782836 /* libxml2.tbd */; };
+		DE1C953627CE14D000F22F8E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B827CC725000782836 /* libsqlite3.tbd */; };
 		DE2ED37227CC71A400782836 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ED37127CC71A400782836 /* AppDelegate.swift */; };
 		DE2ED37427CC71A400782836 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2ED37327CC71A400782836 /* SceneDelegate.swift */; };
 		DE2ED37B27CC71A500782836 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2ED37A27CC71A500782836 /* Assets.xcassets */; };
@@ -32,7 +35,7 @@
 		DECBECDE27CDF3350013BC32 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECDD27CDF3350013BC32 /* LocalAPI.swift */; };
 		DECBECE027CDF43F0013BC32 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECDF27CDF43F0013BC32 /* LocalNetwork.swift */; };
 		DECBECE227CDF65D0013BC32 /* LocationInfomationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECE127CDF65D0013BC32 /* LocationInfomationModel.swift */; };
-		DECC82DE27CE0E2100C65D79 /* entworkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = DECC82DD27CE0E2100C65D79 /* entworkDummy.json */; };
+		DECC82DE27CE0E2100C65D79 /* networkDummy.json in Resources */ = {isa = PBXBuildFile; fileRef = DECC82DD27CE0E2100C65D79 /* networkDummy.json */; };
 		DECC82E027CE0E7C00C65D79 /* Dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC82DF27CE0E7C00C65D79 /* Dummy.swift */; };
 		DECC82E427CE0FD500C65D79 /* LocationInfomationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECC82E327CE0FD500C65D79 /* LocationInfomationModelTests.swift */; };
 		F078F29A35816A17235C2725 /* Pods_findCVS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923866C8B1719F62040B89BD /* Pods_findCVS.framework */; };
@@ -120,7 +123,7 @@
 		DECBECDD27CDF3350013BC32 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
 		DECBECDF27CDF43F0013BC32 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
 		DECBECE127CDF65D0013BC32 /* LocationInfomationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationModel.swift; sourceTree = "<group>"; };
-		DECC82DD27CE0E2100C65D79 /* entworkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = entworkDummy.json; sourceTree = "<group>"; };
+		DECC82DD27CE0E2100C65D79 /* networkDummy.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = networkDummy.json; sourceTree = "<group>"; };
 		DECC82DF27CE0E7C00C65D79 /* Dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dummy.swift; sourceTree = "<group>"; };
 		DECC82E327CE0FD500C65D79 /* LocationInfomationModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationModelTests.swift; sourceTree = "<group>"; };
 		F7407D9F317E43ED9D431EAC /* Pods-findCVS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-findCVS.debug.xcconfig"; path = "Target Support Files/Pods-findCVS/Pods-findCVS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,6 +142,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE1C953627CE14D000F22F8E /* libsqlite3.tbd in Frameworks */,
+				DE1C953527CE14C500F22F8E /* libxml2.tbd in Frameworks */,
+				DE1C953427CE14BD00F22F8E /* libc++.tbd in Frameworks */,
 				DE2ED3B527CC723500782836 /* QuartzCore.framework in Frameworks */,
 				DE15277E27CC737E002E45E1 /* DaumMap.framework in Frameworks */,
 				DE2ED3B327CC722F00782836 /* CoreLocation.framework in Frameworks */,
@@ -214,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1921CE27CE0CD80007673A /* LocaNetworkStub.swift */,
-				DECC82DD27CE0E2100C65D79 /* entworkDummy.json */,
+				DECC82DD27CE0E2100C65D79 /* networkDummy.json */,
 				DECC82DF27CE0E7C00C65D79 /* Dummy.swift */,
 				DECC82E327CE0FD500C65D79 /* LocationInfomationModelTests.swift */,
 			);
@@ -407,7 +413,7 @@
 				};
 			};
 			buildConfigurationList = DE2ED36927CC71A400782836 /* Build configuration list for PBXProject "findCVS" */;
-			compatibilityVersion = "Xcode 13.0";
+			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -430,7 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DECC82DE27CE0E2100C65D79 /* entworkDummy.json in Resources */,
+				DECC82DE27CE0E2100C65D79 /* networkDummy.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -778,7 +784,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.terry.findCVS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/terry/Desktop/dev/campus/faseCampus_iOS/Part4_Advanced/findCVS/findCVS/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/terry/Desktop/dev/fastCampus/findCVS/findCVS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -811,7 +817,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.terry.findCVS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = /Users/terry/Desktop/dev/campus/faseCampus_iOS/Part4_Advanced/findCVS/findCVS/BridgingHeader.h;
+				SWIFT_OBJC_BRIDGING_HEADER = /Users/terry/Desktop/dev/fastCampus/findCVS/findCVS/BridgingHeader.h;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

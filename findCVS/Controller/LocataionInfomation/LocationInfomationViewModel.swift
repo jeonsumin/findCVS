@@ -7,7 +7,6 @@
 
 import RxSwift
 import RxCocoa
-import os
 
 struct LocationInfomationViewModel {
     let disposeBag = DisposeBag()
