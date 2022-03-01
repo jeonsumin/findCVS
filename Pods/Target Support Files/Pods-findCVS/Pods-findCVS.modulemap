@@ -1,0 +1,6 @@
+framework module Pods_findCVS {
+  umbrella header "Pods-findCVS-umbrella.h"
+
+  export *
+  module * { export * }
+}
