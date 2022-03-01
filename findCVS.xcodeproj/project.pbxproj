@@ -31,6 +31,9 @@
 		DE2ED3B127CC722400782836 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B027CC722400782836 /* SystemConfiguration.framework */; };
 		DE2ED3B327CC722F00782836 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B227CC722F00782836 /* CoreLocation.framework */; };
 		DE2ED3B527CC723500782836 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE2ED3B427CC723500782836 /* QuartzCore.framework */; };
+		DECBECDE27CDF3350013BC32 /* LocalAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECDD27CDF3350013BC32 /* LocalAPI.swift */; };
+		DECBECE027CDF43F0013BC32 /* LocalNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECDF27CDF43F0013BC32 /* LocalNetwork.swift */; };
+		DECBECE227CDF65D0013BC32 /* LocationInfomationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECBECE127CDF65D0013BC32 /* LocationInfomationModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +98,9 @@
 		DE2ED3B627CC723D00782836 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		DE2ED3B727CC724500782836 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		DE2ED3B827CC725000782836 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		DECBECDD27CDF3350013BC32 /* LocalAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAPI.swift; sourceTree = "<group>"; };
+		DECBECDF27CDF43F0013BC32 /* LocalNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNetwork.swift; sourceTree = "<group>"; };
+		DECBECE127CDF65D0013BC32 /* LocationInfomationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfomationModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +148,7 @@
 			children = (
 				DE1527AF27CC74EB002E45E1 /* LocationInfomation.swift */,
 				DE1527B327CC7505002E45E1 /* LocationInfomationViewModel.swift */,
+				DECBECE127CDF65D0013BC32 /* LocationInfomationModel.swift */,
 			);
 			path = LocataionInfomation;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				DE2ED38527CC71CE00782836 /* BridgingHeader.h */,
+				DECBECDC27CDF30D0013BC32 /* Network */,
 				DE1527C127CC7660002E45E1 /* Extension */,
 				DE1527A627CC7441002E45E1 /* Entities */,
 				DE1527B127CC74EF002E45E1 /* Controller */,
@@ -270,6 +278,15 @@
 				DE2ED3A027CC71EC00782836 /* MTMapCircle.h */,
 			);
 			path = Headers;
+			sourceTree = "<group>";
+		};
+		DECBECDC27CDF30D0013BC32 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DECBECDD27CDF3350013BC32 /* LocalAPI.swift */,
+				DECBECDF27CDF43F0013BC32 /* LocalNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,12 +375,15 @@
 				DE1527C327CC7669002E45E1 /* Rx.swift in Sources */,
 				DE1527CA27CC8345002E45E1 /* DetailListBackgroundViewModel.swift in Sources */,
 				DE1527AC27CC7441002E45E1 /* DetailListCellData.swift in Sources */,
+				DECBECE227CDF65D0013BC32 /* LocationInfomationModel.swift in Sources */,
+				DECBECDE27CDF3350013BC32 /* LocalAPI.swift in Sources */,
 				DE1527B627CC7510002E45E1 /* BaseViewController.swift in Sources */,
 				DE1527AE27CC7441002E45E1 /* LocationData.swift in Sources */,
 				DE1527C827CC8335002E45E1 /* DetailListBackgroundView.swift in Sources */,
 				DE1527B427CC7505002E45E1 /* LocationInfomationViewModel.swift in Sources */,
 				DE1527AB27CC7441002E45E1 /* MTMapViewError.swift in Sources */,
 				DE1527C627CC7840002E45E1 /* DetailListCell.swift in Sources */,
+				DECBECE027CDF43F0013BC32 /* LocalNetwork.swift in Sources */,
 				DE1527AD27CC7441002E45E1 /* KLDocument.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
